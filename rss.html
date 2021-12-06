@@ -1,0 +1,15 @@
+<rss version='2.0'>
+	<channel>
+		<title>Apps Script Release Notes</title>
+		<link>https://developers.google.com/apps-script/releases</link>
+		<description>This page lists the major changes in each release of Google Apps Script. It is intended to help developers identify recent changes in behavior.</description>
+    <? for (item of items) { ?>
+		<item>
+			<title><?= item.title ?></title>
+			<link><?= item.link ?></link>
+			<description><?= item.title ?></description>
+			<pubDate><?= item.date ?></pubDate>
+		</item>
+    <? } ?>
+	</channel>
+</rss>
