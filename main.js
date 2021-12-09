@@ -1,7 +1,7 @@
 const URL = 'https://developers.google.com/apps-script/releases'
 const CACHE_KEY = 'rss'
 
-const fetch = () => {
+const getFeed = () => {
   const cache = CacheService.getScriptCache()
   const cached = cache.get(CACHE_KEY)
   if (cached) {
@@ -31,7 +31,7 @@ const fetch = () => {
 }
 
 const doGet = () => {
-  return ContentService.createTextOutput(fetch()).setMimeType(
+  return ContentService.createTextOutput(getFeed()).setMimeType(
     ContentService.MimeType.RSS
   )
 }
